@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3 GAME</title>
+    <link rel="stylesheet" href="Main.CSS">
+    <nav>
+        <a href="index.html">Home</a>
+        <br>
+        <a href="Boards.html">Boards</a>
+        <a href="W3games.html">Game</a>
+    </nav>
+
+
+   
+    <script>
+        // create a function t o create our  game
+
+        function playGame() {
+            // weare going to nararate what is going on in this function in the console
+
+            console.log("playGame function was called");
+
+            //roll a die
+            var die1 = rollDie();
+            console.log("the first die roll is: " + die1);
+
+            var die2 = rollDie();
+            console.log("the second die roll is: " + die2);
+
+            //add the dice rolls together 
+            var sum = die2+ die1;
+
+            //output the dice rolls to the page
+            document.getElementById("die1Results").textContent = "Die 1 is: " + die1; 
+            document.getElementById("die2Results").textContent = "Die 2 is: " + die2;
+            document.getElementById("sumResults").textContent = "Die sum is: " + sum;
+
+
+
+            //game logic 
+            if (sum == 7 || sum ==11) {
+                 //if you get a 7 or 11 you lose 
+            document.getElementById("gameResult").textContent ="You win";
+            }
+
+            else if(die1 == die2 && die1 % 2 == 0) {
+                //if you get a 7 or 11 you lose 
+            document.getElementById("gameResult").textContent ="You win";
+            }
+            else{
+                document.getElementById("gameResult").textContent ="You tried (you pushed)";
+            }
+            
+
+
+            
+            
+        }
+            
+        // create a function to generate a die roll - a random number between 1 and 6 
+
+        function rollDie() {
+            // generate a random number between 1 and 6 
+            var die = Math.random() * 6; // multipication symbol
+            // return the random number to thwe code that called tis function
+            return Math.ceil(die); //return a whole number
+        }
+    </script>
+</head>
+<body>
+    <Header>
+
+        <h1> Welcome to my dice game. Click the button</h1>
+    </Header>
+    <main>
+        <button onclick="playGame();"> PLAY GAME</button>
+
+        <div id="gameResult">Game Results</div>
+        <div id="die1Results">die 1 result</div>
+        <div id="die2Results">die 2 results</div>
+        <div id="sumResults"> sum results</div>
+    </main>
+</body>
+</html>

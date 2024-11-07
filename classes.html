@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// to define a class in javascript, use the keyboard class
+//use a capital letter for youclass name so it makes it easier for other Devs
+// class is like a bluprint when building ahouse -its is the plan 
+  class Animal {
+  // define the contructor (this lets up set upo a class very easily )
+  constructor(name, species, sound) {
+    // take the value and pass into the constructor and we assign then to the class properties
+    this.name = name;// name of the animal 
+    this.species = species; //specices of th animal 
+    this.sound = sound; // the sound the animal makes 
+   
+  }
+  //methods are the thing the calss can do 
+  //typicallly the propoerties have get or set methods 
+  //get - what is the current value of the property 
+  //set - change the value of the property 
+  // method will return a string with the animal info 
+  describe() {
+    console.log(this.name + "   is    a "  + this.species + "  that    make   a  " + this.sound  + "  sound  ");
+  }
+  makesound(){
+    console.log(this.name + "   says " + this.sound);
+  }
+}
+  //set up a few objects 
+  //objects are the houses built from a blueprint
+  var dog = new Animal("Pnut", "dog", "woof");
+  
+  // create a cat object based on the animal class
+  var cat = new Animal("Patches", "cat" , "meow");
+  
+
+  var cat2 = new Animal("Levi", "cat", "meow");
+
+  //get the info on the dog
+
+  dog.describe();
+  cat.describe();
+  cat2.describe();
+
+
+
+    </script>
+</body>
+</html>

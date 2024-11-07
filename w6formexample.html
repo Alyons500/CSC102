@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 forms </title>
+</head>
+<body>
+    <!-- getting user information, html form allows us to enter information and do something with it. (assuming we set up a server)-->
+    <h1>Simple Form</h1>
+    <form action="" method="post" onsubmit="return validateForm();">
+        <!-- Getting users name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <!-- set up a label and textbox to get the user email -->
+        <label for="emailaddr">Email:</label>
+        <input type="text" id="emailaddr" email="emailaddr">
+        <!-- set up label and textbox to get the user's age -->
+         <label for="age"> Age: </label>
+         <input type="number" id="age" name="age">
+         <br>
+         <br>
+         <input type="submit" value="Validate data">
+
+         <script>
+
+            function validateForm() {
+                //get the name user entered in the text box an put it in 
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("emailaddr").value;
+                var age = document.getElementById("age").value;
+
+                console.log("name=" + name);
+                console.log("email=" + email);
+                console.log("age=" + age);
+
+                if  (name.trim() == "") {
+                    alert("Please enter a name.");
+                }
+                 // make sure email was entered
+                if  (name.trim() == "") {
+                    alert("Please enter a email address.");
+                }
+                  //make age is entered 
+                if  (age.trim() == "") {
+                    alert("Please enter a age.");
+                }
+
+                // make sure is a number 
+                if (isNaN( age)) {
+                    alert(" Please enter a number for the age.")
+                }
+
+
+                //prevent the form submitting
+
+                return false;
+            }
+         </script>
+
+
+
+
+
+    </form>
+</body>
+</html>
