@@ -20,7 +20,7 @@ function checkPalindrome(wordToTest) {
  console.log("tag=" + checkPalindrome("tag"));
  console.log("A man a plan a canal panama=" + checkPalindrome("radar"));
 
-// bContinue will track if the user wantto keepentering words
+// bContinue will track if the user wantto keep entering words
 var  bContinue = true;
 
 // loop to keep running the code as the user wants
@@ -32,8 +32,8 @@ do{
 //test the variable
 var isPalindrome = checkPalindrome(userInput);
 
-if (isPalindrome){ // is palindrome  == true  
-    
+if (isPalindrome == true){ // is palindrome  == true  
+    alert(userInput + "This is a palidrome!");
 
 
 }else { 
