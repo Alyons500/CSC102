@@ -28,8 +28,7 @@ var  bContinue = true;
 do {
  var userInput = prompt('Enter a word to test if ti is a palidrome:        ');
 
-}
-//test the variable
+ //test the variable
 var isPalindrome = checkPalindrome(userInput);
 
 if (isPalindrome == true){ // is palindrome  == true  
@@ -43,14 +42,21 @@ if (isPalindrome == true){ // is palindrome  == true
 }
  var answer = prompt("Do you want to continue? (y/n)");
 
- bContinue = false; // change bcountinue to false so we can wait exit our
+ 
 
  
 
 
-if(answer  == "n" || "N" ) {
+if(answer  == "n" ||  answer == "N" ) {
  alert(userInput + "Good bye");
 }
+bContinue = false; // change bcountinue to false so we can wait exit our
+ 
+
+} while (bContinue); {
+
+}
+
   
 
   
