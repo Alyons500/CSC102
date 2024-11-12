@@ -21,7 +21,7 @@ function validateForm() {
     }
     else if(zipcode.length != 5){
         document.getElementById("loginStatus").innerHTML = "Please enter a 5 digit zip code";
-        //alert("Please enter a 5 digit zip code");
+        //alert("Please enter a 5 digit zip cod--e");
     }
     else{
         document.getElementById("loginStatus").innerHTML = "welcome," + fullName + ",  The secret word is validation.";
