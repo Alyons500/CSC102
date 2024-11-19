@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Example</title>
+</head>
+<body>
+    <h1>Pizza Chef Array Example </h1>
+
+    <p>Total Pizza Baked: <span id="spnTotalPizza"></span></p>
+
+    <p>Baked Level  <span id="spnLevel"></span></p>
+
+    <label  for="numPizza">New Pizza Baked</label>
+    <input type="number" id="numPizza " name="numPizza" min="0" max="1000" value="0">
+
+    <button onclick="updateChefStats();">Update Stats</button>
+
+    <p>Toppings <span id="spnToppings"></span></p>
+
+
+
+
+    <script>
+
+        var Toppings1 = "Pepperoni";
+        var Toppings2 = "Mushrooms";
+        var Toppings3 = "Olives";
+        var Toppings4 = "Sausages";
+        var Toppings5 = "Ham";
+        var Toppings6 = "Anchovies";
+        var Toppings7 = "Pineapple";
+        var Toppings8 = "Cinnamon";
+
+
+
+
+    //make the code more efficent using a array
+
+    var arrToppings = ["Pepperoni", "Mushrooms", "Olives", "Sausages", "Ham", "Anchovies", "Pineapple", "Cinnamon" ];
+
+    //print out the toppings in the array using a loop 
+    // when looping in a array , start off with zero 
+    //keep looping until the counter == the number of elements in the array 
+    //increase the counter by 1 each time the loop runs so you can work with each elemants in the array
+    for (var i = 0; i < arrToppings.length; i++){
+        document.getElementById("spnToppings").innerHTML += arrToppings[i]; + "";
+    }
+
+ function updateChefStats() {
+
+}
+
+
+
+    </script>
+</body>
+</html>
