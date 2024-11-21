@@ -14,7 +14,7 @@
 
     btnplay.hidden = false;
     btnpause.hidden = false;
-
+ }
     function playSound() {
         //set upo a nickname.shortcut
         var audio = document.getElementById("audioSound");
@@ -35,5 +35,5 @@
     }
 
 
-}
+
 
