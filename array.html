@@ -8,21 +8,60 @@
 <body>
     <h1>Pizza Chef Array Example </h1>
 
-    <p>Total Pizza Baked: <span id="spnTotalPizza"></span></p>
+    <p>Total Pizza Baked: <span id="spnTotalPizza">0</span></p>
 
     <p>Baked Level  <span id="spnLevel"></span></p>
 
     <label  for="numPizza">New Pizza Baked</label>
-    <input type="number" id="numPizza " name="numPizza" min="0" max="1000" value="0">
+    <input type="number" id="numPizza" name="numPizza" min="0" max="1000" value="0">
 
     <button onclick="updateChefStats();">Update Stats</button>
 
-    <p>Toppings <span id="spnToppings"></span></p>
+    <p>Toppings <span id="spnToppings">BeginnerChef</span></p>
 
 
 
 
     <script>
+
+    // our function to see how many pizzas were baked
+     function updateChefStats() {
+        
+        var newpizza = parseInt(document.getElementById("numPizza").value);
+        var oldPizza = parseInt(document.getElementById("spnTotalPizza").textContent);
+
+        console.log("newPizzas=" +  newpizza);
+        console.log("oldPizzas=" + oldPizza);
+
+        //add old and new pizzas together
+
+        var totalPizzas = newpizza + oldPizza;
+        document.getElementById("spnTotalPizza").textContent = totalPizzas;
+            // this variable will track how many pizza they have packed
+        
+
+        // add some decision logic to check for the pizza chef level 
+        var cheflevel = document.getElementById("spnLevel").textContent;
+
+        if (totalPizzas > 500) {
+            var cheflevel = "Master Chef";
+
+
+        } 
+        else if (totalPizzas > 300) {
+            cheflevel = "Expert Chef";
+        }
+        else if (totalPizzas > 100) {
+          cheflevel =  "Skilled  Chef";
+        }
+        else {
+            chefLevel = "Begginer Chef";
+        }
+        document.getElementById("spnLevel").textContent = cheflevel;
+ 
+
+ }
+     
 
         var Toppings1 = "Pepperoni";
         var Toppings2 = "Mushrooms";
@@ -48,9 +87,7 @@
         document.getElementById("spnToppings").innerHTML += arrToppings[i]; + "";
     }
 
- function updateChefStats() {
 
-}
 
 
 
