@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 13  Dynamic Table</title>
+    <link rel="stylesheet" href="Main.CSS">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <br>
+        <a href="Boards.html">Boards</a>
+        <a href="W3games.html">Game</a>
+    
+
+    </nav>
+  
+    <table id="tabledata">
+        <!-- set up the heade ro with the colunm headings -->
+         <tr>
+            <th>Name</th>
+            <th>CEO</th>
+            <th>Location</th>
+         </tr>
+
+
+
+
+
+    </table>
+
+
+
+
+
+
+
+
+
+</body>
+    <script>
+        // arrEmployeesis a 2- dimesional array - array within an array
+        var arrEmployess = [
+            ["Meta","Mark Zackuberg","Menlo Park CA"],
+            ["Microsoft","Bill Gates","Redmond WA"],
+            ["Apple","Tim Scott","Cupertino CA"],
+            ["OpenAI","Sam Altman","San Franscico "]
+
+
+        ];
+
+            // function to build the table rows and columns to show data 
+
+            function displayData() {
+                // create the pointer/nickname/shortcut to the html table element 
+                var table = document.getElementById("tabledata");
+
+                //loop through the 2-d arrEmployees
+                for (var i = 0; i < arrEmployess.length; i++) {
+                    //set up a variable to hold the employee info array 
+
+                     var each = arrEmployess[i];
+
+                     //build the table 
+                     var row = document.createElement("tr");
+
+                     // nested loop to build the columns / table data
+                     for (var j = 0 ; j < each.length; j++) {
+                        var colunm = document.createElement("td");
+
+                    // add the peice of information to the td
+                    colunm.textContent = each[j];
+
+                    row.appendChild(colunm);
+
+
+
+                     }
+
+                     table.appendChild(row);
+                }
+            }
+                displayData();
+            //call the function to display the data
+
+    </script>
+</html>
