@@ -1,46 +1,55 @@
-/* selesctor can be an HTML elemaent, it can be a custom style - start with or it can be an id - start with #
-selecctor{
-       property1: value;
-       property2: value;
 
-}
-*/
+
+
+
 header {
-    text-align: center;
-    padding-left: 100px;
+    text-align:center;
+   
 }
 
 body {
-    background-color: #E9D985;
+   background-color: #F4B942;
     color: #222E50;
     width: 100%;
+
 }
-nav {
-    height: 600px;
-    width: 200px;
-    float:  left;
+nav ul li {
+    margin-bottom: 10px;
+    display: inline;
+}
+nav ul  a {
+    width: 45px;
     padding: 5px;
     line-height: 30px;
     text-align: center;
+    list-style: none;
     text-decoration: none;
+
 }
+nav ul  a:hover {
+    background-color: #222E50;
+
+}
+
+
+
 footer {
+    text-align: center;
+    margin-top: 1000px;
+    
+
+}
+startButton   {
     text-align: center;
     
 
 }
-startButton {
-    text-align: center;
-
-}
-stopButton {
+stopButton:hover {
     text-align: center;
 }
 #FunnyMeme {
    position: absolute; /* will this allow the image around */
    margin: 200px;
-
-
    float: center;
    width: 300px;
    left: 100px;
@@ -49,11 +58,8 @@ stopButton {
     
 
 }
-
+ 
 P{
     width: 100%;
     text-align: center;
-}
-h1 {
-    padding-left: 150px;
 }
