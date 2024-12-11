@@ -1,21 +1,24 @@
 
 
 
-
 header {
     text-align:center;
+    animation: glow 1s ease-in-out infinite alternate;
    
 }
 
 body {
-   background-color: #F4B942;
-    color: #222E50;
+   background-image: url("patterns.jpg");
+    color: #011638;
     width: 100%;
+
+   
 
 }
 nav ul li {
     margin-bottom: 10px;
     display: inline;
+
 }
 nav ul  a {
     width: 45px;
@@ -27,11 +30,15 @@ nav ul  a {
 
 }
 nav ul  a:hover {
-    background-color: #222E50;
+    background-color: #011638;
+
+   
 
 }
 
-
+button {
+    border-radius: 30px;
+}
 
 footer {
     text-align: center;
