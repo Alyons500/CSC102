@@ -99,7 +99,7 @@ stopButton:hover {
    position: absolute; /* will this allow the image around */
    margin: 200px;
    float: center;
-   width: 300px;
+   width: 200px;
    left: 100px;
    right: 100px;
 
@@ -120,6 +120,8 @@ P{
   width: 30%;
   background-color: #011638;
   border-radius: 30px;
+  
+  
 
 
   
@@ -130,7 +132,7 @@ P{
 }
 .degree {
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
 .degree:hover {
@@ -156,4 +158,7 @@ P{
     display: inline-block;
     flex-direction: column;
     align-content: center;
+}
+#programming {
+    
 }
